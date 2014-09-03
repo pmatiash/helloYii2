@@ -129,4 +129,27 @@ class SiteController extends Controller
         return $this->render('darrowtest', ['dataProvider' => $dataProvider]);
         }
     }
+
+    public function actionCreatifftest()
+    {
+        $cities = (new \app\models\Creatiff\City)->getList();
+
+        return $this->render('creatifftest', ['cities' => $cities]);
+    }
+
+    public function actionDeliveryestimate()
+    {
+        $post = Yii::$app->request->post();
+
+        if (!$post) {
+            return null;
+        }
+
+        $package = new \app\models\Creatiff\Package();
+
+        $package->setAttributes($post);
+
+        echo (new \app\models\Creatiff\Reports\Report())->setPackage($package);
+
+    }
 }

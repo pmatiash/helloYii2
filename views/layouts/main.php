@@ -36,6 +36,7 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'Home', 'url' => ['/site/index']],
+                    ['label' => 'Creatiff test', 'url' => ['/site/creatifftest']],
                     ['label' => 'Digitalarrowtech test', 'url' => ['/site/darrowtest']],
                     ['label' => 'About', 'url' => ['/site/about']],
                     ['label' => 'Contact', 'url' => ['/site/contact']],
